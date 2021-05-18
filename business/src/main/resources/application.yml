@@ -1,9 +1,21 @@
 spring:
   application:
     name: business
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: 10.10.11.20:9200
+  elasticsearch:
+    rest:
+      uris: 10.10.11.20:9200
+  redis:
+    host: 10.10.11.20
+    password: ebit
 server:
   port: 10001
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka/
+
