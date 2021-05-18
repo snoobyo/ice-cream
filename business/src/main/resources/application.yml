@@ -1,6 +1,6 @@
 spring:
   application:
-    name: business
+    name: ic-business
   data:
     elasticsearch:
       client:
@@ -13,9 +13,9 @@ spring:
     host: 10.10.11.20
     password: ebit
 server:
-  port: 10001
+  port: 10002
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:10000/eureka/
+      defaultZone: http://localhost:10001/eureka/
 
