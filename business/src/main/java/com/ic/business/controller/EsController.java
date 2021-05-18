@@ -50,8 +50,6 @@ public class EsController {
                 .build();
         SearchHits<Fruit> search = esRestTemplate.search(query, Fruit.class);
         List<SearchHit<Fruit>> searchHits = search.toList();
-        for (int i = 0; i < searchHits.size(); i++) {
-            System.out.println(searchHits.get(i).getContent());
-        }
+        searchHits.stream().forEach(e -> System.out.println(e.getContent()));
     }
 }
