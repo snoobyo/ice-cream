@@ -5,3 +5,4 @@
 2. 集成中间件
   - Redis缓存数据库
   - Elasticsearch搜索引擎
+  - netty网络通信
