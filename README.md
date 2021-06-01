@@ -6,3 +6,12 @@
   - Redis缓存数据库
   - Elasticsearch搜索引擎
   - netty网络通信
+3. 项目模块
+- auth-认证中心
+- business-业务服务
+- netty-网络通信
+- gateway-网关服务
+- eureka-注册中心
+- common-公共工具类
+
+
