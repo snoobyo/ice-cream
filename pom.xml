@@ -21,6 +21,8 @@
         <module>gateway</module>
         <module>business</module>
         <module>netty</module>
+        <module>auth</module>
+        <module>common</module>
     </modules>
     <dependencies>
         <dependency>
