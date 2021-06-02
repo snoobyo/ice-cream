@@ -11,7 +11,14 @@ spring:
       uris: 10.10.11.20:9200
   redis:
     host: 10.10.11.20
-    password: ebit
+    password: 1234
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 4
+        max-wait: 5000
+        time-between-eviction-runs: 60000
 server:
   port: 10002
 eureka:
