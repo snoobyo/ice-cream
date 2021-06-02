@@ -13,5 +13,7 @@
 - gateway-网关服务
 - eureka-注册中心
 - common-公共工具类
+4. 集成解决方案
+- 分布式事务seata
 
 
