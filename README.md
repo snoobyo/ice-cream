@@ -20,5 +20,7 @@
 - inventory-库存服务
 4. 集成解决方案
 - 分布式事务seata
+- easyExcel
+- freemaker方式导出word
 
 
