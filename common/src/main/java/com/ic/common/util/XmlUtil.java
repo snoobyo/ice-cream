@@ -8,6 +8,11 @@ import org.dom4j.io.SAXReader;
 import java.io.File;
 import java.util.Iterator;
 
+/**
+ * Xml工具类
+ *
+ * @author wind
+ */
 public class XmlUtil {
 
     public static void parse(String filePath) {
