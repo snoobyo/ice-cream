@@ -37,6 +37,5 @@ public class XmlUtil {
 
     public static void main(String[] args) {
         parse("/Users/wind/Desktop/test.xml");
-//        parse("/Users/wind/Desktop/演示一线#10.kml");
     }
 }

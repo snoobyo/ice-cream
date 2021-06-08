@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Json工具类
+ *
+ * @author wind
  */
 public class JacksonUtil {
 
