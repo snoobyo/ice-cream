@@ -1,14 +1,6 @@
 spring:
   application:
     name: ic-business
-  data:
-    elasticsearch:
-      client:
-        reactive:
-          endpoints: 10.10.11.20:9200
-  elasticsearch:
-    rest:
-      uris: 10.10.11.20:9200
   redis:
     host: 10.10.11.20
     password: 1234
@@ -19,10 +11,33 @@ spring:
         min-idle: 4
         max-wait: 5000
         time-between-eviction-runs: 60000
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 1234
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
+        retry:
+          enabled: true
+    template:
+      mandatory: true
 server:
   port: 10002
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10001/eureka/
-
+#publisher-returns: true
+#  # 开启发送确认机制
+#  publisher-confirms: true
+#  listener:
+#    type: simple
+#    simple:
+#      default-requeue-rejected: false
+#      acknowledge-mode: manual

@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
  * Redis操作工具类
  */
 @Component
-public class RedisUtils {
+public class RedisUtil {
 
     private final StringRedisTemplate stringRedisTemplate;
 
-    public RedisUtils(StringRedisTemplate stringRedisTemplate) {
+    public RedisUtil(StringRedisTemplate stringRedisTemplate) {
         this.stringRedisTemplate = stringRedisTemplate;
     }
 

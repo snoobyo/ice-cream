@@ -19,6 +19,8 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     // deviceId <--> channelId
     private static Map<String, String> deviceControlMap = new ConcurrentHashMap<>();
 
+    public static ChannelHandlerContext channelHandlerContext;
+
     /**
      * 客户端连接会触发
      */
@@ -28,10 +30,14 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 //        map.put(channelId, ctx);
 //        System.out.println(map.size() + " | " + map);
 //        log.info(channelId+ "Channel active......");
-        int port = ((InetSocketAddress) ctx.channel().localAddress()).getPort();
-        System.out.println(port);
-        System.out.println("连接：" + Thread.currentThread().getName());
+//        int port = ((InetSocketAddress) ctx.channel().localAddress()).getPort();
+//        System.out.println(port);
+//        System.out.println("连接：" + Thread.currentThread().getName());
 
+        if (channelHandlerContext == null) {
+            channelHandlerContext = ctx;
+            System.out.println("注册");
+        }
     }
 
     /**
@@ -57,6 +63,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
         ctx.close();
+        log.info("exceptionCaught");
     }
 
     /**
